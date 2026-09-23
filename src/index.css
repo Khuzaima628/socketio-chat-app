@@ -1,0 +1,73 @@
+:root {
+  --bg: #0f1115;
+  --bg-elevated: #16181f;
+  --bg-sidebar: #13151b;
+  --bg-hover: #1e2129;
+  --bg-active: #242833;
+  --border: #262a35;
+  --text: #e4e6eb;
+  --text-dim: #9198a8;
+  --text-faint: #5c6270;
+  --accent: #6c5ce7;
+  --accent-hover: #7d6ff0;
+  --online: #2ecc71;
+  --offline: #5c6270;
+  --danger: #e05260;
+  --bubble-mine: #6c5ce7;
+  --bubble-theirs: #1e2129;
+  --radius: 12px;
+  --sans: 'Segoe UI', system-ui, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
