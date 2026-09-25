@@ -27,6 +27,7 @@ export default function MessageInput({ onSend, onTyping }) {
         placeholder="Type a message..."
         value={text}
         onChange={handleChange}
+        autoComplete="off"
       />
       <button type="submit" disabled={!text.trim()}>
         Send
