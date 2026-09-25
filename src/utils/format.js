@@ -1,10 +1,15 @@
 export function formatTime(isoString) {
-  return new Date(isoString).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  if (!isoString) return '';
+  const date = new Date(isoString);
+  if (isNaN(date.getTime())) return '';
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
 export function formatLastSeen(isoString) {
   if (!isoString) return '';
-  const diffMs = Date.now() - new Date(isoString).getTime();
+  const date = new Date(isoString);
+  if (isNaN(date.getTime())) return '';
+  const diffMs = Date.now() - date.getTime();
   const minutes = Math.floor(diffMs / 60000);
   if (minutes < 1) return 'just now';
   if (minutes < 60) return `${minutes}m ago`;
