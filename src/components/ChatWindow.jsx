@@ -26,6 +26,7 @@ export default function ChatWindow({
 
   return (
     <div className="chat-main">
+      
       <div className="chat-header">
         <button className="back-btn" onClick={onBack} aria-label="Back">←</button>
         <Avatar src={avatar} alt={title} size={38} />
